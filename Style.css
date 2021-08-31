@@ -105,10 +105,10 @@ nav {
 }*/
 .reveal p {
   position: relative;
-  transform: translateY(5vh);
+  transform: translateY(-12vh);
   opacity: 0;
   transition: all 1500ms ease;
-  transition-delay: 150ms;
+  transition-delay: 100ms;
 }
 .reveal.active p {
   transform: translateY(0vh);
