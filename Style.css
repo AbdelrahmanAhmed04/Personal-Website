@@ -9,7 +9,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: #c9d9e9;
+  /*background: #c9d9e9;*/
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 .homepage {
@@ -26,7 +26,7 @@ body {
   font-size: 1.2em;
   text-decoration: none;
   letter-spacing: 2px;
-  transition: 0.7s;
+  transition: 400ms;
 }
 .nav_links a:hover {
   color: #0d0220;
@@ -63,7 +63,7 @@ nav {
 }
 .logo img {
   width: 130px;
-  transition: 00.5s;
+  transition: 400ms;
 }
 .logo img:hover {
   width: 140px;
@@ -71,7 +71,7 @@ nav {
 .nav_links {
   display: flex;
   justify-content: space-around;
-  width: 110vh;
+  width: 130vh;
 }
 .burger {
   display: none;
@@ -92,27 +92,41 @@ nav {
   text-shadow: -0.5px -0.5px 0 #000000, 0.5px -0.5px 0 #000000,
     -0.5px 0.5px 0 #000000, 0.5px 0.5px 0 #000000;
 }
-/*section {
+/*.reveal {
   opacity: 0;
   transform: translateY(4em) rotateZ(-5deg);
   transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
     opacity 0.3s 0.25s ease-out;
   will-change: transform, opacity;
 }
-section .is-visible {
+.reveal.active {
   opacity: 1;
   transform: rotateZ(-2deg);
+}*/
+.reveal p {
+  position: relative;
+  transform: translateY(5vh);
+  opacity: 0;
+  transition: all 1500ms ease;
+  transition-delay: 150ms;
 }
-*/
-.Intro h1,
-#About P {
+.reveal.active p {
+  transform: translateY(0vh);
+  opacity: 1;
+}
+#About {
+  display: flex;
+  height: 100vh;
+  background: #c9d9e9;
+}
+.Intro h1 {
   font-family: "Open Sans", sans-serif;
   font-size: 8vh;
   text-decoration: none;
   letter-spacing: 2px;
   color: #a4c7eb;
-  transition: font-size 1s, letter-spacing 1.5s;
-  transition-delay: 0.1s;
+  transition: font-size 1000ms, letter-spacing 1500ms;
+  transition-delay: 150ms;
   position: relative;
   top: 10vh;
 }
@@ -128,7 +142,7 @@ section .is-visible {
   font-size: 1.2em;
   text-decoration: none;
   letter-spacing: 2px;
-  transition: 0.7s;
+  transition: 400ms;
   padding: 1vh 1vh 1vh 1vh;
   background: #77b2ee;
   border-radius: 10px;
